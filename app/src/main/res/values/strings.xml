@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">悦餐厅</string>
+    <string name="yilan">一览</string>
+    <string name="search">搜索</string>
+    <string name="shoppingcart">购物车</string>
+    <string name="user">个人中心</string>
+
+
+    --------------- user --------/
+    <string name="dongtai">我的动态</string>
+    <string name="lishi">浏览历史</string>
+    <string name="zhanneixin">站内信</string>
+    <string name="shezhi">设置</string>
+    <string name="guanyuwomen">关于我们</string>
+    <string name="dianzan">给我们点赞</string>
+    <string name="zanzhu">赞助一下</string>
+    <string name="yinsi">隐私协议</string>
+    <string name="test">评价很好，下次再来。
+以下为测试语句，请忽略。
+这种浓郁的味道真不可思议，和极有嚼劲的面搭配起来，让人不禁想要一口接一口。这是我第一次吃到这种味道，这道菜有着前所未有的新鲜味，温润的甜味，让整盘菜更显出奥妙....过熟柿子自然朴实的甜味，跟蔬菜的味道十分搭配，将青椒肉丝的嫩与脆衬托的更为出色，呈现出完美的青椒肉丝。</string>
+
+
+</resources>

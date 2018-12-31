@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+        <ImageView
+            android:id="@+id/user_toolbar_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back1"/>
+
+        <TextView
+            android:id="@+id/user_toolbar_title"
+            android:text="注册"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/textColor"
+        android:orientation="horizontal" />
+
+
+    <LinearLayout
+        android:id="@+id/user_signup_linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/user_signup_phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="请输入手机号"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/signup_edit_bg"
+            android:inputType="phone"
+            android:maxLength="11"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/user_signup_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/signup_edit_bg"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:hint="请输入验证码"
+                android:paddingLeft="10dp"
+                android:maxLength="6"
+                android:textSize="20sp"
+                android:inputType="number"
+                android:digits="0123456789qwertyuioplkjhgfdsazxcvbnm"/>
+
+            <Button
+                android:id="@+id/user_signup_getCode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00caab"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:text="获取验证码"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/user_signup_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="请输入密码"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/signup_edit_bg"
+            android:inputType="textPassword"
+            android:digits="0123456789qwertyuioplkjhgfdsazxcvbnm"
+            android:maxLength="20"/>
+
+        <EditText
+            android:id="@+id/user_signup_passwordagain"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/signup_edit_bg"
+            android:gravity="center_vertical"
+            android:hint="再次输入密码"
+            android:paddingLeft="10dp"
+            android:layout_margin="10dp"
+            android:textSize="20sp"
+            android:inputType="textPassword"
+            android:digits="0123456789qwertyuioplkjhgfdsazxcvbnm"
+            android:maxLength="20" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/user_signup_linear3"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/user_signup_linear2"
+        android:layout_marginLeft="20dp">
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:checked="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="我已阅读并同意《使用协议》"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/user_signup_linear4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_below="@+id/user_signup_linear3">
+
+        <Button
+            android:id="@+id/user_signup_signup"
+            android:layout_width="match_parent"
+            android:layout_height="48.0dip"
+            android:layout_margin="16dp"
+            android:background="#00caab"
+            android:gravity="center"
+            android:text="注册"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/usre_goto_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_signup_linear4"
+        android:paddingLeft="20dp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="已有账号，直接登录"/>
+
+</RelativeLayout>

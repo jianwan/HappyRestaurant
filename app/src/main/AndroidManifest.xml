@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.yuecanting.happyrestaurant">
+
+    <!--bmob -->
+    <!--允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--获取GSM（2g）、WCDMA（联通3g）等网络状态的信息  -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--获取wifi网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--获取sd卡写的权限，用于文件上传和下载-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--允许读取手机状态 用于创建BmobInstallation-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+     <!-- 蓝牙分享所需的权限 -->
+    <uses-permission  android:name="android.permission.BLUETOOTH" />
+     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
+    <application
+        android:name="com.mob.MobApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/yuecanting"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".user.SignUpActivity"/>
+        <activity android:name=".user.LoginActivity"/>
+        <activity android:name=".yilan.caipin_and_tiezi.CantingActivity"/>
+        <activity android:name=".yilan.caipin_and_tiezi.MeishiInformationActivity"/>
+        <activity android:name=".yilan.fatie.TieziFabiaoAcitivity"/>
+        <activity android:name=".yilan.fatie.TieziInformationActivity"/>
+        <activity android:name=".yilan.fatie.FaBiaoOkActivity"/>
+
+
+        <activity android:name=".wxapi.WXEntryActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+
+        <meta-data android:name="Mob-AppKey" android:value="297d0c9cf063c"/>
+        <meta-data android:name="Mob-AppSecret" android:value="4e3b34e24cf1c9f5b3f0a741311e4ebe"/>
+
+
+        <activity
+            android:name="me.iwf.photopicker.PhotoPickerActivity"
+            android:theme="@style/PhotoTheme" />
+
+        <activity
+            android:name="me.iwf.photopicker.PhotoPagerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+    </application
+>
+
+</manifest>

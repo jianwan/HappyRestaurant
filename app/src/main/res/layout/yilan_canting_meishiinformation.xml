@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <ImageView
+            android:id="@+id/meishi_information_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher"
+            android:adjustViewBounds="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/meishi_information_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="这里是美食的介绍"
+                android:gravity="center"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/meishi_information_xihuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/xihuan"
+                android:layout_marginLeft="90dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/meishi_information_xihuan_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:id="@+id/meishi_information_tiezi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pinglun"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"/>
+            <TextView
+                android:id="@+id/meishi_information_tiezitext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发帖"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:id="@+id/meishi_information_fenxiang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/share"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/meishi_information_fenxiangtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分享"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/meishi_information_canting"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+        <ImageView
+            android:id="@+id/meishi_information_cantingpic"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_launcher"
+            android:adjustViewBounds="true"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/meishi_information_cantingname"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="xx西餐"
+                android:gravity="center_vertical"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/meishi_information_cantingcontent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="专经美式牛排,兼营法意式菜系"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

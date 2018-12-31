@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.mob.sdk'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "28.0.3"
+    defaultConfig {
+        applicationId "com.example.yuecanting.happyrestaurant"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //兼容Android6.0系统所需
+    useLibrary 'org.apache.http.legacy'
+
+    lintOptions{
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:appcompat-v7:26.+'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    //状态栏适配
+    implementation 'com.jaeger.statusbarutil:library:1.4.0'
+    //bmob-sdk：Bmob的android sdk包，包含了Bmob的数据存储、文件等服务，以下是最新的bmob-sdk:
+    //3.5.5：请务必查看下面注释[1]
+    implementation 'cn.bmob.android:bmob-sdk:3.6.7'
+    //如果你想应用能够兼容Android6.0，请添加此依赖(org.apache.http.legacy.jar)
+    implementation 'cn.bmob.android:http-legacy:1.0'
+    implementation 'com.android.support:support-v4:23.2.1'
+    //recyclerview库
+    implementation 'com.android.support:recyclerview-v7:26.4.0'
+    //BRVAH
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    //cardview
+    implementation 'com.android.support:cardview-v7:23.1.1'
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.1.1'
+    //搜索框
+    implementation 'com.carson_ho:SearchLayout:1.0.1'
+//    implementation 'com.github.chengzipi:Searchbox:v1.0.0'
+    //dialog
+    implementation 'com.orhanobut:dialogplus:1.11@aar'
+
+    //图片选择/照相
+    implementation 'me.iwf.photopicker:PhotoPicker:0.9.12@aar'
+
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '25.0.0'
+            }
+        }
+    }
+}
+
